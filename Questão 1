@@ -1,0 +1,19 @@
+def bubble_sort(letters):
+    n = len(letters)
+    # Realiza o Bubble Sort
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if letters[j] > letters[j+1]:
+                # Troca as letras se estiverem fora de ordem
+                letters[j], letters[j+1] = letters[j+1], letters[j]
+    return letters
+
+# Entrada das letras pelo usuário
+user_input = input("Insira várias letras separadas por espaço: ")
+letters = user_input.split()
+
+# Realiza a ordenação
+sorted_letters = bubble_sort(letters)
+
+# Exibe o resultado
+print("Letras ordenadas:", sorted_letters)
